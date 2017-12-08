@@ -4,14 +4,12 @@ public class Room {
 
     private int capacity;
     private ArrayList<Guest> guests;
-    private RoomType roomType;
     private double rate;
 
 
-    public Room(int capacity, RoomType roomType, double rate){
+    public Room(int capacity, double rate){
         this.capacity = capacity;
         this.guests = new ArrayList<>();
-        this.roomType = roomType;
         this.rate = rate;
     }
 
@@ -23,15 +21,16 @@ public class Room {
         return guests.size();
     }
 
-    public RoomType getRoomType() {
-        return roomType;
-    }
-
     public double getRate() {
         return rate;
     }
 
     public void addGuest(Guest guest){
-        guests.add(guest);
+        if (getGuestCount() < capacity){
+        guests.add(guest);}
+    }
+
+    public void removeGuest(Guest guest){
+        guests.remove(guest);
     }
 }

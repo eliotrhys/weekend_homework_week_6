@@ -1,7 +1,7 @@
 public enum RoomType {
 
-    BEDROOM("Bedroom"),
-    CONFERENCEROOM("Conference Room");
+    SINGLE("Single Bedroom"),
+    DOUBLE("Double Bedroom");
 
     private final String type;
 
