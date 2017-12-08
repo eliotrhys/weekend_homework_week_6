@@ -8,11 +8,30 @@ public class Room {
     private double rate;
 
 
-    public Room(int Capacity, ArrayList guests){
+    public Room(int capacity, RoomType roomType, double rate){
         this.capacity = capacity;
-        this.guests = guests;
+        this.guests = new ArrayList<>();
         this.roomType = roomType;
         this.rate = rate;
     }
 
+    public int getCapacity() {
+        return capacity;
+    }
+
+    public int getGuestCount(){
+        return guests.size();
+    }
+
+    public RoomType getRoomType() {
+        return roomType;
+    }
+
+    public double getRate() {
+        return rate;
+    }
+
+    public void addGuest(Guest guest){
+        guests.add(guest);
+    }
 }
