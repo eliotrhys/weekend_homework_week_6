@@ -21,22 +21,17 @@ public class Hotel<T> {
         room.addGuest(guest);
     }
 
-//    public int getEmptyRooms(){
-//        ArrayList<T> emptyRooms = new ArrayList<>();
-//
-//        for (int i = 0; i < countRooms(); i++){
-//            T room = rooms.get(i);
-//            if (room.getGuestCount() == 0){
-//                emptyRooms.add(room);
-//            }
-//        }
-//        return emptyRooms.size();
-//    }
+    public int getEmptyRooms(){
+        ArrayList<T> emptyRooms = new ArrayList<>();
 
-
-
-
-
+        for (int i = 0; i < countRooms(); i++){
+            T room = rooms.get(i);
+            if (room.getGuestCount() == 0){
+                emptyRooms.add(room);
+            }
+        }
+        return emptyRooms.size();
+    }
 
 
 }
