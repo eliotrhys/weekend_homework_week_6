@@ -6,6 +6,7 @@ import static org.junit.Assert.assertEquals;
 public class HotelTest {
 
     Hotel testHotel;
+    Hotel bHotel;
     Bedroom testBedroom;
     ConferenceRoom testConference;
     Guest testGuest;
@@ -47,14 +48,14 @@ public class HotelTest {
 
 
 
-//    @Test
-//    public void canFindEmptyRoom(){
-//        testHotel.addRooms(testBedroom);
-//        testHotel.addRooms(testConference);
-//        testHotel.addGuestToRoom(testConference, testGuest);
-//        testHotel.addGuestToRoom(testConference, testGuest);
-//        testHotel.getEmptyRooms();
-//        assertEquals(testHotel.getEmptyRooms(), 1);
-//    }
+    @Test
+    public void canFindEmptyRoom(){
+        testHotel.addRooms(testBedroom);
+        testHotel.addRooms(testConference);
+        testHotel.addGuestToRoom(testConference, testGuest);
+        testHotel.addGuestToRoom(testConference, testGuest);
+        testHotel.getEmptyRooms();
+        assertEquals(testHotel.getEmptyRooms(), 1);
+    }
 
 }

@@ -1,15 +1,15 @@
 import java.lang.reflect.Array;
 import java.util.ArrayList;
 
-public class Hotel<T> {
+public class Hotel {
 
-    private ArrayList<T> rooms;
+    private ArrayList<Room> rooms;
 
     public Hotel(){
         this.rooms = new ArrayList<>();
     }
 
-    public void addRooms(T room){
+    public void addRooms(Room room){
         rooms.add(room);
     }
 
@@ -22,16 +22,17 @@ public class Hotel<T> {
     }
 
     public int getEmptyRooms(){
-        ArrayList<T> emptyRooms = new ArrayList<>();
+        ArrayList<Room> emptyRooms = new ArrayList<>();
 
         for (int i = 0; i < countRooms(); i++){
-            T room = rooms.get(i);
+            Room room = rooms.get(i);
+
+
             if (room.getGuestCount() == 0){
                 emptyRooms.add(room);
             }
         }
         return emptyRooms.size();
     }
-
 
 }
